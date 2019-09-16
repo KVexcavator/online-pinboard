@@ -3,4 +3,6 @@ class Pin < ApplicationRecord
   friendly_id :name, use: :slugged
 
   belongs_to :board
+
+  mount_uploader :image, ImageUploader
 end

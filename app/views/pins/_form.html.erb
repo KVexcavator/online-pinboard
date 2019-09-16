@@ -17,8 +17,9 @@
   </div>
 
   <div class="field">
-    <%= form.label :image %>
-    <%= form.text_field :image %>
+    <%= image_tag(@pin.image_url) if @pin.image? %>
+    <%= form.file_field :image %>
+    <%= form.hidden_field :image_cache %>
   </div>
 
   <div class="field">

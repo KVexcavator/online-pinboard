@@ -21,6 +21,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'devise'
 # create pretty URLs
 gem 'friendly_id', '~> 5.2.4'
+# ImageMagick
+gem 'rmagick'
+# upload files from Ruby applications
+gem 'carrierwave', '~> 2.0'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

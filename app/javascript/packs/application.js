@@ -8,6 +8,8 @@ require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 require("jquery")
+// vendor
+require('infinite-scroll/dist/infinite-scroll.pkgd.min.js')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -16,6 +18,16 @@ require("jquery")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
-$(document).on('turbolinks:load', function () {
-  alert("My test JQuery run!");
+// $(document).on('turbolinks:load', function () {
+//   alert("My test JQuery run!");
+// })
+
+jQuery(function(){
+  $('.posts').infiniteScroll({
+    // options
+    path: 'pins/page={{#}}',
+    append: '.post',
+    elementScroll: true,
+    history: false,
+  });
 })

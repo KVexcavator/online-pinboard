@@ -7,7 +7,7 @@
 
 <p>
   <strong>Image:</strong>
-  <%= @pin.image %>
+  <%=link_to(image_tag(@pin.image.url, :width=>"200", :height=>"200"), @pin) %>
 </p>
 
 <p>

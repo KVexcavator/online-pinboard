@@ -24,7 +24,7 @@
 
   <div class="field">
     <%= form.label :board_id %>
-    <%= form.number_field :board_id %>
+    <%= form.select(:board_id, Board.find(:).collect {|u| [u.name, u.id]}, :prompt => 'Select') %>
   </div>
 
   <div class="actions">

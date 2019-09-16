@@ -25,6 +25,8 @@ gem 'friendly_id', '~> 5.2.4'
 gem 'rmagick'
 # upload files from Ruby applications
 gem 'carrierwave', '~> 2.0'
+# paginator
+gem 'kaminari'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

@@ -2,6 +2,7 @@
 
 <h1>Pins</h1>
 
+
 <table>
   <thead>
     <tr>
@@ -29,3 +30,5 @@
 <br>
 
 <%= link_to 'New Pin', new_pin_path %>
+<hr>
+<%= paginate @pins %>

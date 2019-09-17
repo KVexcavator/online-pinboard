@@ -7,14 +7,22 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+
+// jQuery
 require("jquery")
+// jQuery test
+// $(document).on('turbolinks:load', function () {
+//   alert("My test run!");
+// })
+
+
 // vendor
 require('infinite-scroll')
 
 
 //folders
-const testy=require('./pins')
-testy.test
+const pins=require('./pins')
+
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -25,15 +33,7 @@ testy.test
 // const imagePath = (name) => images(name, true)
 
 
-$(function(){
-  var InfiniteScroll = require('infinite-scroll');
 
-  var infScroll = new InfiniteScroll( '.container', {
-    // options...
-    path: '.pagination a',
-    append: '.post',
-    history: false,
-  });
-})
+
 
 

@@ -1,7 +1,14 @@
 module.exports={
-  test:
-  $(document).on('turbolinks:load', function () {
-    alert("My test run!");
-  })
+  pins:
+    $(function(){
+      var InfiniteScroll = require('infinite-scroll');
+    
+      var infScroll = new InfiniteScroll( '.container', {
+        // options...
+        path: '.pagination a',
+        append: '.post',
+        history: false,
+      });
+    })
 }
 

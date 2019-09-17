@@ -21,7 +21,7 @@ module.exports={
         path: '.pagination a',
         append: '.post',
         outlayer: msnry,
-        history: false,
+        loadOnScroll: true
       });
 
     })

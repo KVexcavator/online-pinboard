@@ -1,28 +1,28 @@
-<p id="notice"><%= notice %></p>
-<%= link_to 'New Pin', new_pin_path %>
-<h1>Pins</h1>
-</hr>
-<table class="posts">
-  <tbody class="page">
-    <% @pins.each do |pin| %>
-      <tr class="post">
-        <%=link_to(image_tag(pin.image.thumb.url), pin) %>
-        <p>
-          <strong>Board:</strong>
-          <%= pin.board.title %>
-          <br/>
-          <%= pin.board.user.email %>
-          <br/>
-          <%= link_to 'Show', pin %>
-          <%= link_to 'Edit', edit_pin_path(pin) %>
-          <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </p>
-      </tr>
-    <% end %>    
-  </tbody>  
-</table>
-</hr>
+<div>
+  <h1>Pins</h1>
+  <%= link_to 'New Pin', new_pin_path %>
+</div>
+
+<div class="posts">
+  <% @pins.each do |pin| %>
+    <div class="post">
+      <%=link_to(image_tag(pin.image.thumb.url), pin) %>
+      <p>
+        <strong>Board:</strong>
+        <%= pin.board.title %>
+        <br/>
+        <%= pin.board.user.email %>
+        <br/>
+        <%= link_to 'Show', pin %>
+        <%= link_to 'Edit', edit_pin_path(pin) %>
+        <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
+    </div>
+  <% end %>    
+</div>
+<div>
 <%= paginate @pins %>
+</div>
 
 
 

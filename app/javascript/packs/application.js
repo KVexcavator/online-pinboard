@@ -19,6 +19,7 @@ require("jquery")
 // vendor
 require('infinite-scroll')
 require('masonry-layout')
+require('imagesloaded')
 
 
 //folders

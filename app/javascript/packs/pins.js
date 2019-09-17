@@ -2,13 +2,19 @@ module.exports={
   pins:
     $(function(){
       var InfiniteScroll = require('infinite-scroll');
-      var Masonry = require('masonry-layout')
-      var elem = document.querySelector('.container');
+      var Masonry = require('masonry-layout');
+      var imagesLoaded = require('imagesloaded');
+
+      var elem = document.querySelector('.main');
       var msnry = new Masonry( elem, {
         // options
         itemSelector: '.post',
-        columnWidth: 200
+        columnWidth: 210,
+        gutter: 4
       });
+
+      // make imagesLoaded available for InfiniteScroll
+      InfiniteScroll.imagesLoaded = imagesLoaded;
     
       var infScroll = new InfiniteScroll( '.container', {
         // options...
@@ -17,6 +23,7 @@ module.exports={
         outlayer: msnry,
         history: false,
       });
+
     })
 }
 

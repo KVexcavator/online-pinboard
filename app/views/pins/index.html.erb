@@ -1,26 +1,27 @@
-<div>
+<div class="static-pins-title">
   <h1>Pins</h1>
-  <%= link_to 'New Pin', new_pin_path %>
+  <p><%= link_to 'New Pin', new_pin_path %></p>
 </div>
-
-<div class="container">
-  <% @pins.each do |pin| %>
-    <article class="post">
-      <%=link_to(image_tag(pin.image.thumb.url), pin) %>
-      <p>
-        <strong>
-          <%= pin.name %>
-        </strong>
-        <%= pin.board.title %>
-        <br/>
-        <%= pin.board.user.email %>
-        <br/>
-        <%= link_to 'Show', pin %>
-        <%= link_to 'Edit', edit_pin_path(pin) %>
-        <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
-      </p>
-    </article>
-  <% end %>    
+<div class="main">  
+  <div class="container">
+    <% @pins.each do |pin| %>
+      <article class="post">
+        <%=link_to(image_tag(pin.image.thumb.url), pin) %>
+        <p>
+          <strong>
+            <%= pin.name %>
+          </strong>
+          <%= pin.board.title %>
+          <br/>
+          <%= pin.board.user.email %>
+          <br/>
+          <%= link_to 'Show', pin %>
+          <%= link_to 'Edit', edit_pin_path(pin) %>
+          <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </p>
+      </article>
+    <% end %>    
+  </div>
 </div>
 <div>
 <%= paginate @pins %>

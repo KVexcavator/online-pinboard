@@ -18,6 +18,7 @@ require("jquery")
 
 // vendor
 require('infinite-scroll')
+require('masonry-layout')
 
 
 //folders
@@ -31,6 +32,8 @@ const pins=require('./pins')
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+
 
 
 

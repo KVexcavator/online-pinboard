@@ -8,6 +8,7 @@
     "@rails/webpacker": "^4.0.7",
     "infinite-scroll": "^3.0.6",
     "jquery": "^3.4.1",
+    "masonry-layout": "^4.2.2",
     "turbolinks": "^5.2.0",
     "wookmark": "^2.1.2"
   },

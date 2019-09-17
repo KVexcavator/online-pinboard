@@ -9,7 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 require("jquery")
 // vendor
-require('infinite-scroll/dist/infinite-scroll.pkgd.min.js')
+require('infinite-scroll')
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -22,12 +22,15 @@ require('infinite-scroll/dist/infinite-scroll.pkgd.min.js')
 //   alert("My test JQuery run!");
 // })
 
-jQuery(function(){
-  $('.posts').infiniteScroll({
-    // options
-    path: 'pins/page={{#}}',
+$(function(){
+  var InfiniteScroll = require('infinite-scroll');
+
+  var infScroll = new InfiniteScroll( '.container', {
+    // options...
+    path: '.pagination a',
     append: '.post',
-    elementScroll: true,
     history: false,
   });
 })
+
+

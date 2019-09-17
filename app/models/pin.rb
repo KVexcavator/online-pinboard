@@ -6,5 +6,5 @@ class Pin < ApplicationRecord
 
   mount_uploader :image, ImageUploader
 
-  paginates_per 10
+  paginates_per 3
 end

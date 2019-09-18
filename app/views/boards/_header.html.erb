@@ -12,7 +12,10 @@
       </li>
       <li class="nav-item">
         <%= link_to "All Pins", pins_path, class: "nav-link" %>
-      </li>      
+      </li>
+      <li class="nav-item">
+        <%= link_to 'New Pin', new_pin_path, class: "nav-link" %> 
+      </li>     
       <li class="nav-item">
         <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link" %>
       </li>
@@ -32,7 +35,4 @@
   </div>
 </nav>
 
-<div>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
-</div>
+

@@ -1,31 +1,29 @@
 
-<div class="main ">  
-  <div class="container">
-    <% @pins.each do |pin| %>
-      <article class="post">
-        <%=link_to(image_tag(pin.image.thumb.url), pin) %>
-        <p>
-          <strong>
-            <%= pin.name %>
-          </strong>
-          <%= pin.board.title %>
-          <br/>
-          <%= pin.board.user.email %>
-          <br/>
-          <%= link_to 'Show', pin %>
-          <%= link_to 'Edit', edit_pin_path(pin) %>
-          <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
-        </p>
-      </article>
-    <% end %>    
-  </div>
-  <div class="page-load-status">
-    <div class="loader-ellips">
-      <span class="loader-ellips__dot"></span>
-      <span class="loader-ellips__dot"></span>
-      <span class="loader-ellips__dot"></span>
-      <span class="loader-ellips__dot"></span>
-    </div>
+<div class="pinboard">  
+  <% @pins.each do |pin| %>
+    <article class="card">
+      <%=link_to(image_tag(pin.image.thumb.url), pin) %>
+      <p>
+        <strong>
+          <%= pin.name %>
+        </strong>
+        <%= pin.board.title %>
+        <br/>
+        <%= pin.board.user.email %>
+        <br/>
+        <%= link_to 'Show', pin %>
+        <%= link_to 'Edit', edit_pin_path(pin) %>
+        <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </p>
+    </article>
+  <% end %>    
+</div>
+<div class="page-load-status">
+  <div class="loader-ellips">
+    <span class="loader-ellips__dot"></span>
+    <span class="loader-ellips__dot"></span>
+    <span class="loader-ellips__dot"></span>
+    <span class="loader-ellips__dot"></span>
   </div>  
 </div>
 

@@ -5,9 +5,9 @@ const imagesLoaded = require('imagesloaded');
 
 $(function(){
       
-  const grid = document.querySelector('.main');
+  const grid = document.querySelector('.container');
   const msnry = new Masonry( grid, {
-    itemSelector: '.post',
+    itemSelector: '.card',
     columnWidth: 210,
     gutter: 4,
     visibleStyle: { transform: 'translateY(0)', opacity: 1 },
@@ -17,7 +17,7 @@ $(function(){
   // initial items reveal
   imagesLoaded( grid, function() {
     grid.classList.remove('container');
-    msnry.options.itemSelector = '.post';
+    msnry.options.itemSelector = '.card';
     msnry.reloadItems()
   });
 
@@ -32,11 +32,11 @@ $(function(){
   // get initial nextURL
   updateNextURL( document );
 
-  var infScroll = new InfiniteScroll( '.main', {
+  var infScroll = new InfiniteScroll( '.container', {
     path: function() {
       return nextURL;
     },
-    append: '.post',
+    append: '.card',
     outlayer: msnry,
     status: '.page-load-status'
   });

@@ -12,8 +12,10 @@
   </head>
 
   <body>
-    <%= render 'boards/header' %>
-    <%= render 'boards/msg' %>
-    <%= yield %>
+    <div class="container-fluid">
+      <%= render 'boards/header' %>
+      <%= render 'boards/msg' %>
+      <%= yield %>
+    </div>
   </body>
 </html>

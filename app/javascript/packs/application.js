@@ -14,6 +14,8 @@ require("jquery")
 // $(document).on('turbolinks:load', function () {
 //   alert("My test run!");
 // })
+// Bootstrap
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 // vendor

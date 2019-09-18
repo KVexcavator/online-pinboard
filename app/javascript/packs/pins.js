@@ -22,14 +22,31 @@ $(function(){
   });
 
   // make imagesLoaded available for InfiniteScroll
-  //InfiniteScroll.imagesLoaded = imagesLoaded;
+  InfiniteScroll.imagesLoaded = imagesLoaded;
 
-  var infScroll = new InfiniteScroll( '.container', {
-    path: '.pagination a',
+  var nextURL;
+
+  function updateNextURL( doc ) {
+    nextURL = $( doc ).find('.pagination a').attr('href');
+  }
+  // get initial nextURL
+  updateNextURL( document );
+
+  var infScroll = new InfiniteScroll( '.main', {
+    path: function() {
+      return nextURL;
+    },
     append: '.post',
     outlayer: msnry,
     status: '.page-load-status'
   });
+
+  infScroll.on( 'load', function( response ) {
+    updateNextURL( response );
+  });
+
+  //console.log(infScroll.getPath())
+
 
 })
 

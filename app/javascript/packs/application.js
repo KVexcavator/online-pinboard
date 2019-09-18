@@ -25,7 +25,7 @@ require('imagesloaded')
 
 
 //folders
-const pins=require('./pins')
+//const pins=require('./pins')
 
 
 

@@ -2,7 +2,7 @@
   <h1>Pins</h1>
   <p><%= link_to 'New Pin', new_pin_path %></p>
 </div>
-<div class="main">  
+<div class="main ">  
   <div class="container">
     <% @pins.each do |pin| %>
       <article class="post">
@@ -21,12 +21,22 @@
         </p>
       </article>
     <% end %>    
+  </div>  
+</div>
+<div class="page-load-status">
+  <div class="loader-ellips">
+    <span class="loader-ellips__dot"></span>
+    <span class="loader-ellips__dot"></span>
+    <span class="loader-ellips__dot"></span>
+    <span class="loader-ellips__dot"></span>
   </div>
 </div>
 <div>
-<%= paginate @pins %>
+  <%= paginate @pins %>
 </div>
-<span><%= javascript_pack_tag 'pins', 'data-turbolinks-track': 'reload' %> %></span>
+<span>
+  <%= javascript_pack_tag 'pins', 'data-turbolinks-track': 'reload' %>
+</span>
 
 
 

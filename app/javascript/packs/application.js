@@ -24,9 +24,6 @@ require('masonry-layout')
 require('imagesloaded')
 
 
-//folders
-//const pins=require('./pins')
-
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference

@@ -27,6 +27,8 @@ gem 'rmagick'
 gem 'carrierwave', '~> 2.0'
 # paginator
 gem 'kaminari'
+# search tomcat sort
+gem 'sunspot_rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -44,6 +46,8 @@ group :development, :test do
 end
 
 group :development do
+  # optional pre-packaged Solr distribution
+  gem 'sunspot_solr'
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'

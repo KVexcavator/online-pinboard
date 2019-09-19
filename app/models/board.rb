@@ -4,4 +4,10 @@ class Board < ApplicationRecord
   
   has_many :pins
   belongs_to :user
+
+  # search
+  searchable do
+    text :title, :description
+    integer :user_id
+  end
 end

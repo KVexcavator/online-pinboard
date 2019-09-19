@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get :search, :to => 'home#search', :as => 'search'
   devise_for :users
   root to: "boards#index"
   resources :pins

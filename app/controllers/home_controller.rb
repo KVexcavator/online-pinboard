@@ -4,17 +4,18 @@ class HomeController < ApplicationController
   end
 
   def search
-    if params[:search].blank?
-      format.html { redirect_to home_url, notice: "Please Supply a Search term" }
-      format.json { head :no_content }
-    elsif params[:search].present?
-      @board_results = Board.search_board(params[:search])
-      @pin = Pin.search_pin(params[:search])
-      if @board_results.nil? && @pin_results.nil?
-        format.html { redirect_to @search, notice: "No Results Found matching your query" }
-      else
-        @search = @board_results + @pin_results
-        format.html { redirect_to home_url, notice: "Following are the search results" }
+    respond_to do |format|
+      if params[:search].blank?
+        format.html { redirect_to index_url, notice: "Please Supply a Search term" }
+      elsif params[:search].present?
+        @board_res = Board.search_board(params[:search])
+        @pin_res = Pin.search_pin(params[:search])
+        if @board_res.nil? && @pin_res.nil?
+          format.html { redirect_to index_url, notice: "No Results Found matching your query" }
+        else
+          @search = @board_res + @pin_res
+          format.html { redirect_to index_url(@search), notice: "Following are the search results" }
+        end
       end
     end
   end

@@ -7,7 +7,7 @@ class Pin < ApplicationRecord
   mount_uploader :image, ImageUploader
   # gem 'kaminari'
   paginates_per 10
-  #search params
+  #searching items
   searchable do
     text :name, :image
     integer :board_id

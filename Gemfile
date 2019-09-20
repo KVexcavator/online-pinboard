@@ -28,6 +28,7 @@ gem 'carrierwave', '~> 2.0'
 # paginator
 gem 'kaminari'
 # search tomcat sort
+gem 'sunspot', :require => 'sunspot'
 gem 'sunspot_rails'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

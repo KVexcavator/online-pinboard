@@ -279,6 +279,7 @@ DEPENDENCIES
   selenium-webdriver
   spring
   spring-watcher-listen (~> 2.0.0)
+  sunspot
   sunspot_rails
   sunspot_solr
   turbolinks (~> 5)

@@ -5,7 +5,7 @@ class Board < ApplicationRecord
   has_many :pins
   belongs_to :user
 
-  # search params
+  # searching items
   searchable do
     text :title, :description
     integer :user_id

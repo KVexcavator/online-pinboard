@@ -9,7 +9,7 @@
     "bootstrap": "^4.3.1",
     "imagesloaded": "^4.1.4",
     "infinite-scroll": "^3.0.6",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "masonry-layout": "^4.2.2",
     "popper.js": "^1.15.0",
     "turbolinks": "^5.2.0",

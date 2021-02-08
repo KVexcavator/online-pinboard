@@ -24,7 +24,7 @@ gem 'friendly_id', '~> 5.2.4'
 # ImageMagick
 gem 'rmagick'
 # upload files from Ruby applications
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 # paginator
 gem 'kaminari'
 # search tomcat sort
